@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/billitems/create}" method="post">
+	
+		<div>
+			<input name="bill.id" th:value=${id} type="hidden"/>
+		</div>
+		<div>
+			<label>Select product name: </label> 
+			<select name="product.id">
+				<option value="">------Select-----</option>
+				<option th:each="product : ${productList}" th:value="${product.id}"
+					th:text="${product.name}"></option>
+			</select><br>
+		<div>
+			<label>Quantity: </label>
+			 <input type="text" placeholder="Nhap so luong mua" name="quantity" /><br>
+		</div>
+		<div>
+			<label for="buyPrice">Buy Price: </label>
+			 <input placeholder="Nhap gia mua" name="buyPrice" /><br>
+		</div>
+		<button type="submit">Save</button>
+	</form>
+</body>
+</html>

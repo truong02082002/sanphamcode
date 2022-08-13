@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-11">
+			<h1>
+				<i class="fa-brands fa-java"> </i>
+			</h1>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3">
+			<div th:replace="/header.html :: main-menu"></div>
+
+		</div>
+
+		<div class="col-md-9">
+			<div layout:fragment="body">
+				<!-- noi dung ben trong se duoc thay doi -->
+			</div>
+		</div>
+	</div>
+
+	<hr />
+
+	<div class="row">
+		<div class=" col-12">
+			<div th:replace="/footer.html :: menu-footer"></div>
+		</div>
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/user/create" method="post">
+		<div>
+			<label>Name: </label>
+			<input type="text" placeholder="Nhap ten" name="name">
+		</div>
+		<div>
+			<label>User Name: </label>
+			<input type="text" placeholder="Nhap ten tai khoan" name="username">
+		</div>
+		<div>
+			<label>Password: </label>
+			<input type="password" placeholder="Nhap mat khau" name="password">
+		</div>
+		<div>
+			<label>Email: </label>
+			<input type="email" placeholder="Nhap email" name="email">
+		</div>
+		<div>
+			<label>Roles: </label>
+			<input type="checkbox" name="roles" th:value="ADMIN">ADMIN
+			<input type="checkbox" name="roles" th:value="MEMBER">MEMBER
+			<input type="checkbox" name="roles" th:value="SELLER">SELLER
+			<input type="checkbox" name="roles" th:value="CUSTOMER">CUSTOMER
+		</div>
+		<button type="submit">Save</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:object="${product}" action="/product/edit" method="post" enctype="multipart/form-data">
+
+		 <input name="id" type="hidden" th:value="${product.id}" /><br>
+		<label for="name">name: </label> 
+		<input name="name" th:value="${product.name}" /><br>
+		<label for="price">Price:</label> 
+		<input name="price" th:value="${product.price}" /><br> 
+		<label for="description">Description: </label> 
+		<input name="description" th:value="${product.description}" /><br>
+		<label for="file">Image:</label><br> 
+		<input type="file" name="file"><br> 
+		<label>Select Category: </label> <select name="category">
+			<option value="">------Select-----</option>
+			<option th:each="cate : ${categoryList}" name="id" th:value="${cate.id}"th:text="${cate.name}"></option>
+		</select><br>
+
+		<button type="submit">Save</button>
+	</form>
+</body>
+</html>

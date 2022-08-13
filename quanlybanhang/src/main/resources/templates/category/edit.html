@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/category/edit" method="post">
+		<label for="name">ID: </label>
+		<input name="id" th:value="${category.id}"/><br>
+		<label for="name">Name: </label>
+		<input name="name" th:value="${category.name}"/><br>
+		
+		<button type="submit">Save</button>
+	</form>
+</body>
+</html>

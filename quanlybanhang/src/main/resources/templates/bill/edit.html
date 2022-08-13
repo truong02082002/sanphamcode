@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/bill/edit" method="post">
+		 <input name="id" type="hidden" th:value="${bill.id}" /><br>
+		<label>By Date:</label>
+		<input type="date" placeholder="Nhap ngay" name="date"> 
+		 
+		<label>Select User: </label> <select name="user">
+			<option value="">------Select-----</option>
+			<option th:each="user : ${userList}" name="id" th:value="${user.id}"th:text="${user.name}"></option>
+		</select><br>
+
+		<button type="submit">Save</button>
+	</form>
+</body>
+</html>
